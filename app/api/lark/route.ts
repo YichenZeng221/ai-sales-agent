@@ -1,3 +1,5 @@
+import { buildStudyAbroadPrompt } from "../../../lib/studyAbroadPrompt";
+
 type UserProfile = {
     school?: string;
     major?: string;
@@ -8,8 +10,6 @@ type UserProfile = {
 
 const userProfiles = new Map<string, UserProfile>();
 const userMemory = new Map<string, string>();
-
-import { buildStudyAbroadPrompt } from "../../../lib/studyAbroadPrompt";
 
 export async function POST(req: Request) {
     try {
